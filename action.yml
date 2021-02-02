@@ -1,0 +1,26 @@
+name: 'G Search Console'
+description: 'Add site to Google search console'
+inputs:
+  key:
+    description: 'Google JSON Key. Base64 format'
+    required: true
+  token:
+    description: 'Google search console refresh token'
+    required: true
+  siteUrl:
+    description: 'Site URL. Absolute path'
+    required: true
+  owners:
+    description: 'Property owners'
+    required: true
+  sitemapFile:
+    description: 'Sitemap file. Relative path'
+    required: true
+outputs:
+  siteUrl:
+    description: 'Site URL'
+  sitemapFile:
+    description: 'Sitemap file'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
